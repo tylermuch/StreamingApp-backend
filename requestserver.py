@@ -5,10 +5,25 @@ from mutagen.mp3 import MP3
 from mutagen.mp3 import EasyMP3
 import mutagen
 
-#logging.basicConfig(level=logging.INFO)
-#logger = logging.getLogger(__name__)
+'''
+The directory structure:
 
-root = '/home/tyler/music'
+root
+|----artist1
+|       |----album1
+|               |----song1
+|               |----song2
+|       |----album2
+|               |----song1
+|----artist2
+|       |----album1
+|               |----song1
+|               |----song2
+|       |----album2
+|               |----song1
+'''
+raise NameError('This must be set to the root of your music directory.')
+root = ''
 
 app = Flask(__name__)
 app.debug = True
