@@ -122,7 +122,7 @@ def getAlbums(artist):
 	return getValidSubdirs(os.path.join(root, artist))
 def getSongs(artist, album = ''):
 	path = os.path.join(root, artist, album)
-	return [d for d in os.listdir(path) if not os.path.isdir(os.path.join(path, d)) and not d.startswith('.') and d.endswith('.mp3')]
+	return [d for d in os.listdir(path) if not os.path.isdir(os.path.join(path, d)) and not d.startswith('.') and (d.endswith('.mp3') or d.endswith('.m4a'))]
 
 if __name__ == "__main__":
 	app.run('0.0.0.0')
